@@ -1,5 +1,21 @@
+//check if user is login?
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    //console.log(user);
+      
+  } else {
+    // No user is signed in.
+   location.href = 'onboarding.html';
+    
+  }
+});
+
+document.getElementById('submit').addEventListener('click',tabulateAnswers);
+
 // function to calculate the result of the survey
-function tabulateAnswers() {
+function tabulateAnswers(e) {
+  
+  e.preventDefault();
   // initialize variables for each choice's score
   // If you add more choices and outcomes, you must add another variable here.
   var c1score = 0;
