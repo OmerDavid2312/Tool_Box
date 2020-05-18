@@ -25,6 +25,7 @@ button.addEventListener('click',(e)=>{
         setTimeout(()=>{
             dangerEl.style.display = 'none';
             //href to other page ...
+            //console.log(res)
        
         },2000)
 
