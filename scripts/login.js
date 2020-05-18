@@ -24,6 +24,7 @@ button.addEventListener('click',(e)=>{
         successEl.innerText = 'התחברת בהצלחה';
         setTimeout(()=>{
             dangerEl.style.display = 'none';
+            //href to other page ...
        
         },2000)
 
