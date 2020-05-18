@@ -18,13 +18,13 @@ button.addEventListener('click',(e)=>{
         return;
     }
     //create new user in firebase
-    firebase.auth().createUserWithEmailAndPassword(emailVal, passwordVal).then(res=>{
+    firebase.auth().signInWithEmailAndPassword(emailVal, passwordVal).then(res=>{
         
         successEl.style.display='block';
-        successEl.innerText = 'נרשמת בהצלחה, מועברת לדף התחברות';
+        successEl.innerText = 'התחברת בהצלחה';
         setTimeout(()=>{
             dangerEl.style.display = 'none';
-            window.location.href = "login.html"; 
+       
         },2000)
 
     }).catch(function(error) {
