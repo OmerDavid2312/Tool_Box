@@ -80,20 +80,36 @@
   </ol>
   
 
-  <h2 dir="rtl">הכוונה למצ'ינג לקבלת מענה מקצועי:</h2> 
-  <h3 dir="rtl">הנושא שהכי מטריד אותי בחיי היומיום שלי:</h3>
-    <form>
+  <h2 dir="rtl">הכוונה למצ'ינג לקבלת מענה מקצועי:</h2>
+      <br>
+  <h5 dir="rtl">הנושא שהכי מטריד אותי בחיי היומיום שלי:</h5>
         <!-- Question 1 -->
         <button class="accordion">אני מרגישה שאני רוצה לדבר עם גורם מקצועי שיקשיב לי (יעוץ נפשי - פסיכולוגית קלינית \ עו"סית רווחה)</button>
-        <!-- Choices for the first question -->
-        <div class="panel">
-          <input type="radio" id="answer1">
-          <label for="answer1">אני רוצה\צריכה לפרוק</label><br>
-          <input type="radio" id="answer2">
-          <label for="answer2">אני צריכה לשתף גורם שהוא חיצוני ולא מכיר אותי ואת משפחתי</label><br>
-          <input type="radio" id="answer3">
-          <label for="answer3">אני רוצה לקבל כלים לעבודה\חשיבה עצמית</label><br>
-        </div>
+        <!-- Sub questions for the first question -->
+      <div class="panel">
+          <h6>אני רוצה/צריכה לפרוק</h6>
+          <input type="range" id="vol1" name="vol" min="1" max="10">
+          <input type="submit">
+<!--          <p>Value: <span id="demo"></span></p>-->
+          <h6>אני צריכה לשתף גורם שהוא חיצוני ולא מכיר אותי ואת המשפחה שלי</h6>
+          <input type="range" id="vol2" name="vol" min="1" max="10">
+          <input type="submit">
+          <h6>אני רוצה לקבל כלים לעבודה/חשיבה עצמאית</h6>
+          <input type="range" id="vo3" name="vol" min="1" max="10">
+          <input type="submit">
+      </div>
+
+
+
+
+<!--      <div class="panel">-->
+<!--          <input type="radio" id="answer1">-->
+<!--          <label for="answer1">אני רוצה\צריכה לפרוק</label><br>-->
+<!--          <input type="radio" id="answer2">-->
+<!--          <label for="answer2">אני צריכה לשתף גורם שהוא חיצוני ולא מכיר אותי ואת משפחתי</label><br>-->
+<!--          <input type="radio" id="answer3">-->
+<!--          <label for="answer3">אני רוצה לקבל כלים לעבודה\חשיבה עצמית</label><br>-->
+<!--        </div>-->
 
         <!-- Question 2 -->
         <button class="accordion">אני מרגישה שהחשש שלי הוא בעיקר כלכלי (יעוץ פיננסי - רו"ח \ כלכלנית \ יועצת בבנק)</button>
@@ -149,6 +165,14 @@
    
    firebase.initializeApp(firebaseConfig);
    firebase.analytics();
+
+   // var slider = document.getElementById("vol1");
+   // var output = document.getElementById("demo");
+   // output.innerHTML = slider.value;
+   //
+   // slider.oninput = function() {
+   //     output.innerHTML = this.value;
+   // }
    
  </script>  
  <script src="/scripts/questionnaire.js"></script> 
