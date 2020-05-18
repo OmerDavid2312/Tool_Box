@@ -17,7 +17,7 @@ button.addEventListener('click',(e)=>{
         },2000)
         return;
     }
-    //create new user in firebase
+    //create new user in firebase !
     firebase.auth().signInWithEmailAndPassword(emailVal, passwordVal).then(res=>{
         
         successEl.style.display='block';
