@@ -5,10 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToolBox</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="./styles/register.css">
 </head>
-<body>
+<body dir="rtl">
+  <div class="container">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto" >
+    <br><br><br><br><br><br>
+    <hr class="my-4">
+    <h2 class="text-pink bold font-weight-bold text-center">הרשמה</h2>
+    <br>
+    <form  >
+      <div class="alert alert-danger text-center" style="display: none;" id="danger" role="alert">
+        
+      </div>
+      <div class="alert alert-success text-center" style="display: none;" id="success" role="alert">
+        
+      </div>
+   <div class="form-group">
+    
+       <input type="email" class="form-control" id="eml" style="text-align: center" placeholder="אימייל" name="eml">
+  </div>
+  
+  <div class="form-group">
 
+   <input type="password" class="form-control" id="pwd" style="text-align: center" placeholder="סיסמא" name="pwd">
+ </div>
+     
+        
+
+        <button type="submit" class="btn btn-lg btn-register btn-block " id="register">הירשמי עכשיו </button>
+        
+        
+  </form>
+  </div>
+    </div>
 
 
 
@@ -36,6 +66,8 @@
   
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
-</script>   
+  
+</script>  
+<script src="/scripts/register.js"></script> 
 </body>
 </html>
