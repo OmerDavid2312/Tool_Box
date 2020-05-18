@@ -37,14 +37,21 @@
       <div class="alert alert-success text-center" style="display: none;" id="success" role="alert">
         
       </div>
+      
+      <select id="role" class="form-control mb-3">
+        <option selected value="type">סוג</option>
+        <option value="user">משתמשת</option>
+        <option value="volunteer">יועצת</option>
+
+      </select>
    <div class="form-group">
     
-       <input type="email" class="form-control" id="eml" style="text-align: center" placeholder="אימייל" name="eml">
+       <input type="email" class="form-control" id="eml"  placeholder="אימייל" name="eml">
   </div>
   
   <div class="form-group">
 
-   <input type="password" class="form-control" id="pwd" style="text-align: center" placeholder="סיסמא" name="pwd">
+   <input type="password" class="form-control" id="pwd"  placeholder="סיסמא" name="pwd">
  </div>
      
         
@@ -67,6 +74,8 @@
 <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
