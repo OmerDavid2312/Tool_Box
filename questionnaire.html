@@ -1,77 +1,143 @@
-<div id="wrapper">
-  <h1>What kind of computer scientist are you?</h1>
-  <p>Take this questionnaire to find out!</p>
-  
-  <form id="quiz">
-    <!-- Question 1 -->
-    <h2>What gets you the most excited?</h2>
-    <!-- Here are the choices for the first question. Each input tag must have the same name. For this question, the name is q1. -->
-    <!-- The value is which answer the choice corresponds to. -->
-    <label><input type="radio" name="q1" value="c1">
-      Experimenting, discovering, and learning
-    </label><br />
-    <label><input type="radio" name="q1" value="c2">
-      Helping others
-    </label><br />
-    <label><input type="radio" name="q1" value="c3">
-      Music, movies, games, and making others laugh
-    </label><br />
-    <label><input type="radio" name="q1" value="c4">
-      Taking risks
-    </label><br />
+<!DOCTYPE html>
+<html>
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 
-    <!-- Question 2 -->
-    <h2>What is your ideal work environment?</h2>
-    <!-- Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question. -->
-    <label><input type="radio" name="q2" value="c1">
-      Inside a high tech lab with lots of fancy equipment
-    </label><br />
-    <label><input type="radio" name="q2" value="c2">
-      Somewhere I feel appreciated for my work
-    </label><br />
-    <label><input type="radio" name="q2" value="c3">
-      Surrounded by cool gadgets and toys
-    </label><br />
-    <label><input type="radio" name="q2" value="c4">
-      Inside a cozy room or garage at home
-    </label><br />
-    
-    <!-- Question 3 -->
-    <h2>Who are your role models?</h2>
-    <!-- Choices for the third question -->
-    <label><input type="radio" name="q3" value="c1">
-      People who make great discoveries
-    </label><br />
-    <label><input type="radio" name="q3" value="c2">
-      People who make sacrifices to help others
-    </label><br />
-    <label><input type="radio" name="q3" value="c3">
-      Creative, artistic, and expressive people
-    </label><br />
-    <label><input type="radio" name="q3" value="c4">
-      People who build innovative products
-    </label><br />
-    
-    <!-- Question 4 -->
-    <h2>What do you do when you encounter a difficult problem?</h2>
-    <!-- Choices for the fourth question -->
-    <label><input type="radio" name="q4" value="c1">
-      Try to find the solution yourself (online, in a book, etc.)
-    </label><br />
-    <label><input type="radio" name="q4" value="c2">
-      Ask someone for help
-    </label><br />
-    <label><input type="radio" name="q4" value="c3">
-      Take a break, because it helps you be more creative
-    </label><br />
-    <label><input type="radio" name="q4" value="c4">
-      Jump in and try different solutions until one works
-    </label><br />
-    
-    <button type="submit" id="submit" onclick="tabulateAnswers()">Submit Your Answers</button>
-  <button type="reset" id="reset" onclick="resetAnswer()">Reset</button>
-  </form>
+<style>
+  .phonelink{
+      position: bottom; /* Lock location always on the scree */
+      bottom: 0; /* Set to the bottom */
+      right: 0; /* Set to the right */
+      margin: 30px; /* Add space around background */
+  }
+  .phoneicon{
+      width: 40px; /* Set width of icon */
+      height: 40px; /* Set height of icon */
+  }
+
+  .headline{
+    font-family: Heebo;
+    text-align: right;
+  }
+  body{
+    background-color: bisque;
+  }
+  .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: right;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
   
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.submit_botton{
+  text-align: right;
+}
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  text-align: right;
+}
+  .panic_button {
+    cursor: pointer;
+    background-color: #000;
+    color: red;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: right;
+    outline: none;
+    font-size: 15px;
+  }
+
+  </style>
+
+<body>
+  <div id="wrapper">
+  <head>Tool Box</head>
+  <h1 class="headline">Tool Box - שאלון כניסה</h1>
+  <ol dir="rtl">שאלות מקדימות\רקע כללי:
+    <li>אני מרגישה שאני נמצאת במערכת יחסים זוגית מכבדת ובטוחה</li>
+    <li>אני חווה קשיים במערכת היחסים שלי</li>
+    <li>אני חשה, משום מה, שזה לא מתאים לשתף אחרים\ות לגבי הזוגיות שלי</li>
+  </ol>
   
-  <div id="answer">Your result will show up here!</div>
+
+  <h2 dir="rtl">הכוונה למצ'ינג לקבלת מענה מקצועי:</h2> 
+  <h3 dir="rtl">הנושא שהכי מטריד אותי בחיי היומיום שלי:</h3>
+    <form>
+        <!-- Question 1 -->
+        <button class="accordion">אני מרגישה שאני רוצה לדבר עם גורם מקצועי שיקשיב לי (יעוץ נפשי - פסיכולוגית קלינית \ עו"סית רווחה)</button>
+        <!-- Choices for the first question -->
+        <div class="panel">
+          <input type="radio" id="answer1">
+          <label for="answer1">אני רוצה\צריכה לפרוק</label><br>
+          <input type="radio" id="answer2">
+          <label for="answer2">אני צריכה לשתף גורם שהוא חיצוני ולא מכיר אותי ואת משפחתי</label><br>
+          <input type="radio" id="answer2">
+          <label for="answer2">אני רוצה לקבל כלים לעבודה\חשיבה עצמית</label><br>
+        </div>
+
+        <!-- Question 2 -->
+        <button class="accordion">אני מרגישה שהחשש שלי הוא בעיקר כלכלי (יעוץ פיננסי - רו"ח \ כלכלנית \ יועצת בבנק)</button>
+        <!-- Choices for the second question -->
+
+        
+        <!-- Question 3 -->
+        <button class="accordion">אני מוטרדת בכל הקשור לזכויות והאפשרויות החוקיות שלי כבת זוג ו\או כאמא? (יעוץ משפטי - עורכת דין)</button>
+        <!-- Choices for the third question -->
+
+        
+      <!-- Question 4 -->
+      <button class="accordion">אני מפחדת שיקרה לי ו\או לילדים שלי משהו (יעוץ נפשי - פסיכולוגית קלינית \ עו"סית רווחה)</button>
+        <!-- Choices for the last question -->  
+
+      <button class="submit_botton" type="submit" id="submit" onclick="tabulateAnswers()">הגשת השאלון</button>
+      <button class="submit_botton" type="reset" id="reset" onclick="resetAnswer()">אתחול השאלון</button>
+    </form>
+    <br>
+
+  <a class="lgscreenphone phonelink" href="https://www.youtube.com/channel/UCQQ9KdZl80R78hZjb8Q_3NQ"><img class="phoneicon" src="https://freeiconshop.com/wp-content/uploads/edd/phone-flat.png"></a>
+  <a class="mbscreenphone phonelink" href="tel:9402188899"><img class="phoneicon" src="https://freeiconshop.com/wp-content/uploads/edd/phone-flat.png"></a>
+    
+  <button class="panic_button">שירותי רווחה</button>
+  <button class="panic_button">משטרה</button>
+
+
 </div>
+</body>
+
+<script>
+    window.onload = function(){
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+    
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+      
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    }
+
+  </script>
+
+
+</html>
