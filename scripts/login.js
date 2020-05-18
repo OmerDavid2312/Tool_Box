@@ -25,7 +25,7 @@ button.addEventListener('click',(e)=>{
         setTimeout(()=>{
             dangerEl.style.display = 'none';
             //href to other page ...
-            //console.log(res)
+            location.href = 'questionnaire.html'
        
         },2000)
 
