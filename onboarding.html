@@ -8,16 +8,34 @@
 <body>
 
     <H1>HI !</H1>
-    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+  
+    
 
-  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-  <script src="/__/firebase/7.14.4/firebase-app.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
 
-  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-  <script src="/__/firebase/7.14.4/firebase-analytics.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
 
-  <!-- Add Firebase products that you want to use -->
-  <script src="/__/firebase/7.14.4/firebase-auth.js"></script>
-  <script src="/__/firebase/7.14.4/firebase-firestore.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDi1P9gSfdOLlXwJEA-uMC_Kko5Avo9zu0",
+    authDomain: "toolbox-69373.firebaseapp.com",
+    databaseURL: "https://toolbox-69373.firebaseio.com",
+    projectId: "toolbox-69373",
+    storageBucket: "toolbox-69373.appspot.com",
+    messagingSenderId: "303423631932",
+    appId: "1:303423631932:web:6042448554f0e45354c939",
+    measurementId: "G-2909XWHECF"
+  };
+  // Initialize Firebase
+  
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script defer src="./scripts/main.js"></script>
 </body>
 </html>

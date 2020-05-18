@@ -1,1 +1,2 @@
-//config fireabase here ..
+const auth = firebase.auth() 
+
