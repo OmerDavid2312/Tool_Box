@@ -40,7 +40,7 @@
   background-color: #ccc; 
 }
 
-.submit_botton{
+.submit_button{
   text-align: right;
 }
 
@@ -130,8 +130,8 @@ p{
   <label for="children" dir="rtl">מספר ילדים:</label>
   <input type="text" id="children" name="children" value=""><br>
 
-  <label for="language" dir="rtl">רמת דתיות:</label>
-    <select id="language">
+  <label for="religion" dir="rtl">רמת דתיות:</label>
+    <select id="religion">
       <option value="religious">דתייה</option>
       <option value="orthodox">מסורתית</option>
       <option value="secular">חילונית</option>
@@ -141,12 +141,12 @@ p{
     
   <ol dir="rtl">שאלות מקדימות\רקע כללי:
     <br>
-    <input type="radio" id="age1" name="age" value="30">
-    <label for="age1">אני מרגישה שאני נמצאת במערכת יחסים זוגית מכבדת ובטוחה</label><br>
-    <input type="radio" id="age2" name="age" value="60">
-    <label for="age2">אני חווה קשיים במערכת היחסים שלי</label><br>  
-    <input type="radio" id="age3" name="age" value="100">
-    <label for="age3">אני חשה, משום מה, שזה לא מתאים לשתף אחרים\ות לגבי הזוגיות שלי</label><br><br>
+    <input type="radio" id="ans1" name="background" value="30">
+    <label for="ans1">אני מרגישה שאני נמצאת במערכת יחסים זוגית מכבדת ובטוחה</label><br>
+    <input type="radio" id="ans2" name="background" value="60">
+    <label for="ans2">אני חווה קשיים במערכת היחסים שלי</label><br>
+    <input type="radio" id="ans3" name="background" value="100">
+    <label for="ans3">אני חשה, משום מה, שזה לא מתאים לשתף אחרים\ות לגבי הזוגיות שלי</label><br><br>
     <input type="submit" value="Submit">
 </ol>
 
@@ -161,46 +161,46 @@ p{
         <div class="box">
           <p>אני רוצה \ צריכה לפרוק</p>
           <div class="rating">
-            <input type="radio" name="rating" id="rate10"><label for="rate10">10</label>
-            <input type="radio" name="rating" id="rate9"><label for="rate9">9</label>
-            <input type="radio" name="rating" id="rate8"><label for="rate8">8</label>
-            <input type="radio" name="rating" id="rate7"><label for="rate7">7</label>
-            <input type="radio" name="rating" id="rate6"><label for="rate6">6</label>
-            <input type="radio" name="rating" id="rate5"><label for="rate5">5</label>
-            <input type="radio" name="rating" id="rate4"><label for="rate4">4</label>
-            <input type="radio" name="rating" id="rate3"><label for="rate3">3</label>
-            <input type="radio" name="rating" id="rate2"><label for="rate2">2</label>
-            <input type="radio" name="rating" id="rate1"><label for="rate1">1</label>
+            <input type="radio" name="rating1" id="1_rate10"><label for="rate10">10</label>
+            <input type="radio" name="rating1" id="1_rate9"><label for="rate9">9</label>
+            <input type="radio" name="rating1" id="1_rate8"><label for="rate8">8</label>
+            <input type="radio" name="rating1" id="1_rate7"><label for="rate7">7</label>
+            <input type="radio" name="rating1" id="1_rate6"><label for="rate6">6</label>
+            <input type="radio" name="rating1" id="1_rate5"><label for="rate5">5</label>
+            <input type="radio" name="rating1" id="1_rate4"><label for="rate4">4</label>
+            <input type="radio" name="rating1" id="1_rate3"><label for="rate3">3</label>
+            <input type="radio" name="rating1" id="1_rate2"><label for="rate2">2</label>
+            <input type="radio" name="rating1" id="1_rate1"><label for="rate1">1</label>
           </div>
         </div>
 
         <p>אני צריכה לשתף גורם שהוא חיצוני ולא מכיר אותי ואת המשפחה שלי</p>
         <div class="rating">
-          <input type="radio" name="rating" id="rate10"><label for="rate10">10</label>
-          <input type="radio" name="rating" id="rate9"><label for="rate9">9</label>
-          <input type="radio" name="rating" id="rate8"><label for="rate8">8</label>
-          <input type="radio" name="rating" id="rate7"><label for="rate7">7</label>
-          <input type="radio" name="rating" id="rate6"><label for="rate6">6</label>
-          <input type="radio" name="rating" id="rate5"><label for="rate5">5</label>
-          <input type="radio" name="rating" id="rate4"><label for="rate4">4</label>
-          <input type="radio" name="rating" id="rate3"><label for="rate3">3</label>
-          <input type="radio" name="rating" id="rate2"><label for="rate2">2</label>
-          <input type="radio" name="rating" id="rate1"><label for="rate1">1</label>
+          <input type="radio" name="rating" id="2_rate10"><label for="rate10">10</label>
+          <input type="radio" name="rating" id="2_rate9"><label for="rate9">9</label>
+          <input type="radio" name="rating" id="2_rate8"><label for="rate8">8</label>
+          <input type="radio" name="rating" id="2_rate7"><label for="rate7">7</label>
+          <input type="radio" name="rating" id="2_rate6"><label for="rate6">6</label>
+          <input type="radio" name="rating" id="2_rate5"><label for="rate5">5</label>
+          <input type="radio" name="rating" id="2_rate4"><label for="rate4">4</label>
+          <input type="radio" name="rating" id="2_rate3"><label for="rate3">3</label>
+          <input type="radio" name="rating" id="2_rate2"><label for="rate2">2</label>
+          <input type="radio" name="rating" id="2_rate1"><label for="rate1">1</label>
         </div>
       
 
       <p>אני רוצה לקבל כלים לעבודה \ חשיבה עצמאית</p>
       <div class="rating">
-        <input type="radio" name="rating" id="rate10"><label for="rate10">10</label>
-        <input type="radio" name="rating" id="rate9"><label for="rate9">9</label>
-        <input type="radio" name="rating" id="rate8"><label for="rate8">8</label>
-        <input type="radio" name="rating" id="rate7"><label for="rate7">7</label>
-        <input type="radio" name="rating" id="rate6"><label for="rate6">6</label>
-        <input type="radio" name="rating" id="rate5"><label for="rate5">5</label>
-        <input type="radio" name="rating" id="rate4"><label for="rate4">4</label>
-        <input type="radio" name="rating" id="rate3"><label for="rate3">3</label>
-        <input type="radio" name="rating" id="rate2"><label for="rate2">2</label>
-        <input type="radio" name="rating" id="rate1"><label for="rate1">1</label>
+        <input type="radio" name="rating" id="3_rate10"><label for="rate10">10</label>
+        <input type="radio" name="rating" id="3_rate9"><label for="rate9">9</label>
+        <input type="radio" name="rating" id="3_rate8"><label for="rate8">8</label>
+        <input type="radio" name="rating" id="3_rate7"><label for="rate7">7</label>
+        <input type="radio" name="rating" id="3_rate6"><label for="rate6">6</label>
+        <input type="radio" name="rating" id="3_rate5"><label for="rate5">5</label>
+        <input type="radio" name="rating" id="3_rate4"><label for="rate4">4</label>
+        <input type="radio" name="rating" id="3_rate3"><label for="rate3">3</label>
+        <input type="radio" name="rating" id="3_rate2"><label for="rate2">2</label>
+        <input type="radio" name="rating" id="3_rate1"><label for="rate1">1</label>
       </div>
     </div>
  
@@ -340,8 +340,8 @@ p{
           </div>
       </div>
          
-      <button class="submit_botton" type="submit" id="submit" onclick="tabulateAnswers()">הגשת השאלון</button>
-      <button class="submit_botton" type="reset" id="reset" onclick="resetAnswer()">אתחול השאלון</button>
+      <button class="submit_button" type="submit" id="submit" onclick="tabulateAnswers()">הגשת השאלון</button>
+      <button class="submit_button" type="reset" id="reset" onclick="resetAnswer()">אתחול השאלון</button>
     </form>
     <br>
 
@@ -387,7 +387,7 @@ p{
    // }
    
  </script>  
- <script src="/scripts/questionnaire.js"></script> 
+ <script src="scripts/Questionnaire.js"></script>
 </body>
 
 <script>
@@ -408,6 +408,8 @@ p{
         });
       }
     }
+
+
 
   </script>
 
