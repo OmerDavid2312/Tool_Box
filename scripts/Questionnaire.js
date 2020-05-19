@@ -49,13 +49,14 @@ function tabulateAnswers() {
       background_choice = i;
     }
   //radio button choice index
-  // var first_phrase_degree;
-  // var ele2 = document.getElementsByName("rating1");
-  // for(var i=0;i<ele.length;i++)
-  //   if(ele2[i].checked === true)
-  //   {
-  //     first_phrase_degree = i;
-  //   }
+  var first_phrase_degree;
+  var ele2 = document.getElementsByName("rating1");
+  for(var i=0;i<ele.length;i++)
+    if(ele2[i].checked === true)
+    {
+      first_phrase_degree = i;
+      alert(i);
+    }
 
   db.collection('users').doc(id).update({
     language:selected_lang,
