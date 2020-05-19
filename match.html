@@ -16,6 +16,19 @@
     font-weight: bold;
     border-color: #d661e0;
     }
+     .column {
+         width: 30%;
+         padding: 5px;
+     }
+
+     /* Clear floats after image containers */
+     .row::after {
+         content: "";
+         clear: both;
+         display: table;
+         text-align: center;
+     }
+
     .btn-tochat:hover{
     background-color: #d661e0;
     color: white;
@@ -32,11 +45,24 @@
               <h1 class=" text-pink font-weight-bold display-4"  dir="rtl">נמצאה התאמה !</h1>
               <hr class="new5"width="8%">
             </div>
+<!--              <div id='container'>-->
+<!--                  <img src='someimage.jpg' style='float: left;'/>-->
+<!--                  <p>some text (that will now wrap around the image</p>-->
+<!--              </div>-->
             <div class="col-lg-8 align-self-baseline">
-              <p class="text-dark font-weight-bold mb-3 lead">נמצאה התאמה עם - X </p>
-              <a href="chat.html" role="button" class='btn btn-lg btn-tochat '>מעבר לצ'אט בטוח</a>
+              <p class="text-dark font-weight-bold mb-3 lead">נמצאה התאמה עם - דנה כהן </p>
+                <div class="row">
+                    <div class="column">
+                        <h6>קצת על עצמי:</h6>
+                        <p>שמי דנה, אני בת 35 וגרה מחיפה. אני עובדת כעובדת סוציאלית כבר 7 שנים ואשמח לעזור לך במה שאוכל.</p>
+                    </div>
+                    <img src="images/ai-faces-01.jpg" width="193" height="200" class="column"><br><br>
+                </div>
+                <br><br>
+                <a href="chat.html" role="button" class='btn btn-lg btn-tochat '>מעבר לצ'אט בטוח</a>
+                <button class='btn btn-lg btn-tochat'>בחירה חוזרת</button>
           </div>
-            
+
         </div>
           
       </header>
