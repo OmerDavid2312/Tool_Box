@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+        /*.phonelink{*/
+        /*    position: bottom; !* Lock location always on the scree *!*/
+        /*    bottom: 0; !* Set to the bottom *!*/
+        /*    right: 0; !* Set to the right *!*/
+        /*    margin: 30px; !* Add space around background *!*/
+        /*}*/
+        .phoneicon{
+            width: 40px; /* Set width of icon */
+            height: 40px; /* Set height of icon */
+        }
+        *{text-align: right}
+
+        .headline{
+            font-family: Heebo;
+            text-align: right;
+        }
+        body{
+            background-color: bisque;
+        }
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: right;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .submit_botton{
+            text-align: right;
+        }
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+            text-align: right;
+        }
+        .panic_button {
+            cursor: pointer;
+            background-color: #000;
+            color: red;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: right;
+            outline: none;
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div id="wrapper">
+    <head>Tool Box</head>
+    <h1 class="headline">Tool Box - שאלון מתנדבות</h1>
+
+    <h2 dir="rtl">אנא עני על מספר שאלות</h2>
+    <br>
+
+
+    <form action="/action_page.php">
+        <h6>:המקצוע שלי הוא</h6>
+        <input type="submit">
+        <label for="professions"></label>
+        <select id="professions" name="professions">
+            <option value="lawyer">עורכת דין</option>
+            <option value="doctor">רופאה</option>
+            <option value="social_worker">עובדת סוציאלית</option>
+            <option value="psychologist">פסיכולוגית</option>
+        </select>
+    </form>
+
+    <br>
+    <br>
+
+    <form action="/action_page.php">
+        <h6>:הימים בהם אני פנויה הם</h6>
+        <input type="submit">
+        <label for="days"></label>
+        <select id="days" name="days" size="7" multiple>
+            <option value="sunday">ראשון</option>
+            <option value="monday">שני</option>
+            <option value="tuesday">שלישי</option>
+            <option value="wednesday">רביעי</option>
+            <option value="thursday">חמישי</option>
+            <option value="friday">שישי</option>
+            <option value="saturday">שבת</option>
+        </select><br><br>
+        <p> ctrl- כדי לבחור מספר ימים, החזיקי את מקש ה*</p>
+
+    </form>
+    <br>
+    <br>
+
+    <form action="/action_page.php">
+        <h6>:שפות</h6>
+        <input type="submit">
+        <label for="lang"></label>
+        <select id="lang" name="lang" size="7" multiple>
+            <option value="sunday">ראשון</option>
+            <option value="monday">שני</option>
+            <option value="tuesday">שלישי</option>
+            <option value="wednesday">רביעי</option>
+            <option value="thursday">חמישי</option>
+            <option value="friday">שישי</option>
+            <option value="saturday">שבת</option>
+        </select><br><br>
+        <p> ctrl- כדי לבחור מספר ימים, החזיקי את מקש ה*</p>
+
+    </form>
+
+<!--    <p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>-->
+
+    <!-- Question 1 -->
+    <button class="accordion">אני מרגישה שאני רוצה לדבר עם גורם מקצועי שיקשיב לי (יעוץ נפשי - פסיכולוגית קלינית \ עו"סית רווחה)</button>
+    <!-- Sub questions for the first question -->
+    <div class="panel">
+        <h6>אני רוצה/צריכה לפרוק</h6>
+        <input type="range" id="vol1" name="vol" min="1" max="10">
+        <input type="submit">
+        <!--          <p>Value: <span id="demo"></span></p>-->
+        <h6>אני צריכה לשתף גורם שהוא חיצוני ולא מכיר אותי ואת המשפחה שלי</h6>
+        <input type="range" id="vol2" name="vol" min="1" max="10">
+        <input type="submit">
+        <h6>אני רוצה לקבל כלים לעבודה/חשיבה עצמאית</h6>
+        <input type="range" id="vo3" name="vol" min="1" max="10">
+        <input type="submit">
+    </div>
+
+
+
+
+    <!--      <div class="panel">-->
+    <!--          <input type="radio" id="answer1">-->
+    <!--          <label for="answer1">אני רוצה\צריכה לפרוק</label><br>-->
+    <!--          <input type="radio" id="answer2">-->
+    <!--          <label for="answer2">אני צריכה לשתף גורם שהוא חיצוני ולא מכיר אותי ואת משפחתי</label><br>-->
+    <!--          <input type="radio" id="answer3">-->
+    <!--          <label for="answer3">אני רוצה לקבל כלים לעבודה\חשיבה עצמית</label><br>-->
+    <!--        </div>-->
+
+    <!-- Question 2 -->
+    <button class="accordion">אני מרגישה שהחשש שלי הוא בעיקר כלכלי (יעוץ פיננסי - רו"ח \ כלכלנית \ יועצת בבנק)</button>
+    <!-- Choices for the second question -->
+
+
+    <!-- Question 3 -->
+    <button class="accordion">אני מוטרדת בכל הקשור לזכויות והאפשרויות החוקיות שלי כבת זוג ו\או כאמא? (יעוץ משפטי - עורכת דין)</button>
+    <!-- Choices for the third question -->
+
+
+    <!-- Question 4 -->
+    <button class="accordion">אני מפחדת שיקרה לי ו\או לילדים שלי משהו (יעוץ נפשי - פסיכולוגית קלינית \ עו"סית רווחה)</button>
+    <!-- Choices for the last question -->
+
+    <button class="submit_botton" type="submit" id="submit" onclick="tabulateAnswers()">הגשת השאלון</button>
+    <button class="submit_botton" type="reset" id="reset" onclick="resetAnswer()">אתחול השאלון</button>
+    </form>
+    <br>
+
+    <!--  <a class="lgscreenphone phonelink" href="https://www.youtube.com/channel/UCQQ9KdZl80R78hZjb8Q_3NQ"><img class="phoneicon" src="https://freeiconshop.com/wp-content/uploads/edd/phone-flat.png"></a>-->
+    <!--  <a class="mbscreenphone phonelink" href="tel:9402188899"><img class="phoneicon" src="https://freeiconshop.com/wp-content/uploads/edd/phone-flat.png"></a>-->
+
+    <button class="panic_button">שירותי רווחה</button>
+    <button class="panic_button">משטרה</button>
+
+
+</div>
+
+<!-- Style -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+
+<script>
+    // // Your web app's Firebase configuration
+    // var firebaseConfig = {
+    //     apiKey: "AIzaSyDi1P9gSfdOLlXwJEA-uMC_Kko5Avo9zu0",
+    //     authDomain: "toolbox-69373.firebaseapp.com",
+    //     databaseURL: "https://toolbox-69373.firebaseio.com",
+    //     projectId: "toolbox-69373",
+    //     storageBucket: "toolbox-69373.appspot.com",
+    //     messagingSenderId: "303423631932",
+    //     appId: "1:303423631932:web:6042448554f0e45354c939",
+    //     measurementId: "G-2909XWHECF"
+    // };
+
+    // // Initialize Firebase
+    // firebase.initializeApp(firebaseConfig);
+    // firebase.analytics();
+
+
+</script>
+<!--<script src="/scripts/questionnaire.js"></script>-->
+</body>
+
+<script>
+
+
+</script>
+
+
+</html>
