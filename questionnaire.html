@@ -2,22 +2,20 @@
 <html>
   <head>
 
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <title>ToolBox</title>
+
 <style>
-
-
-  .phoneicon{
-      width: 40px; 
-      height: 40px; 
-  }
   *{text-align: right}
-
+  form{font-size: 1.3rem;}
+  .text-pink{
+    color: #d661e0;
+  }
   .headline{
     text-align: right;
   }
-
   .accordion {
   background-color: #eee;
   color: #444;
@@ -30,15 +28,9 @@
   font-size: 15px;
   transition: 0.4s;
 }
-  
 .active, .accordion:hover {
   background-color: #ccc; 
 }
-
-.submit_button{
-  text-align: right;
-}
-
 .panel {
   display: block;
   text-align: center;
@@ -50,10 +42,8 @@
   text-align: right;
   float: right;
 }
-
 .box{
   width: 500px;
-  
 }
 p{
   margin:0;
@@ -92,22 +82,20 @@ p{
 {
   background: transparent;
 }
-
-.panic_button {
-  cursor: pointer;
-  background-color: #000;
-  color: red;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: right;
-  outline: none;
-  font-size: 15px;
-}
-
-
+.btn-question{
+    background-color: transparent;
+    color: #d661e0;
+    font-weight: bold;
+    border-color: #d661e0;
+    }
+.btn-question:hover{
+    background-color: #d661e0;
+    color: white;
+    font-weight: bold;
+    border-color: #d661e0;
+    }
 </style>
+
 </head>
 
 <body>
@@ -355,7 +343,7 @@ p{
             </div>
       </div>
          
-      <button class="submit_button" type="submit" id="submit" onclick="tabulateAnswers()">הגשת השאלון</button>
+      <button type="submit" class="btn btn-lg btn-question mt-3  btn-block " id="questionBtn">מעבר לשלב הבא</button>
       <button class="submit_button" type="reset" id="reset" onclick="resetAnswer()">אתחול השאלון</button>
     </form>
     <br>
