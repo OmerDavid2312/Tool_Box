@@ -1,3 +1,5 @@
+var db = firebase.firestore();
+
 const button = document.getElementById('register');
 const email = document.getElementById('eml');
 const password = document.getElementById('pwd');
@@ -22,10 +24,24 @@ button.addEventListener('click',(e)=>{
         
         successEl.style.display='block';
         successEl.innerText = 'התחברת בהצלחה';
+        //move to relevent page
+        db.collection("users").where('email','==',emailVal).get().then(res=>{
+            res.forEach(doc=>{
+                const data = doc.data();
+                console.log(data.volunteer);
+                
+                if(data.volunteer == false)
+                {
+                    location.href = 'questionnaire.html'
+                }
+                else
+                {
+                    location.href = 'questionnaire_volunteers.html'
+                }
+            })
+        })
         setTimeout(()=>{
-            dangerEl.style.display = 'none';
-            //href to other page ...
-            location.href = 'questionnaire.html'
+            dangerEl.style.display = 'none';   
        
         },2000)
 
