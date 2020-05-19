@@ -1,6 +1,8 @@
 const button = document.getElementById('register');
 const email = document.getElementById('eml');
 const password = document.getElementById('pwd');
+const name = document.getElementById('name');
+
 const dangerEl = document.getElementById('danger');
 const successEl = document.getElementById('success');
 
@@ -25,6 +27,7 @@ button.addEventListener('click',(e)=>{
         db.collection("users").add({
             email:emailVal,
             volunteer :isVolunteer,
+            name:name
 
         })
         .then(()=> {

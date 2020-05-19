@@ -36,6 +36,7 @@ button.addEventListener('click',(e)=>{
         var db = firebase.firestore();
         db.collection("users").add({
             email:emailVal,
+            name:'אנונימית',
             volunteer :isVolunteer,
 
         })
