@@ -418,3 +418,7 @@ loadMessages();
 function back_onboarding() {
   window.location.href = "onboarding.html";
 }
+
+function getDetails(){
+  prompt("שם משתמשת: ran@ran.com \n סיסמא: 123456")
+}

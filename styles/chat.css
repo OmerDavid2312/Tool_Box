@@ -248,3 +248,13 @@ main, #messages-card {
   font-weight: bold;
   border-color: #d661e0;
   }
+
+.align-right{
+  float: right;
+  text-align: right;
+}
+
+.div-btns{
+  float:right;
+  padding: 10px;
+}
