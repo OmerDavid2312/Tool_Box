@@ -93,8 +93,14 @@ main, #messages-card {
   padding: 5px 0 5px 10px;
 
 }
-.message-container .vol {
-  background-color: ;
+.message-container-vol {
+  display: block;
+  margin-top: 10px;
+  border-top: 1px solid #f5dada;
+  padding-top: 10px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-color: #edb0f3;
 }
 
 .message-container .name {

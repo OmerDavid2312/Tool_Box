@@ -252,7 +252,7 @@ var MESSAGE_TEMPLATE =
 
 // Template for messages.
 var MESSAGE_TEMPLATE_VOL =
-'<div class="message-container vol">' +
+'<div class="message-container-vol message-container">' +
   '<div class="spacing"><div class="pic"></div></div>' +
   '<div class="message"></div>' +
   '<div class="name"></div>' +
@@ -280,7 +280,12 @@ function deleteMessage(id) {
 
 function createAndInsertMessage(id, timestamp) {
   const container = document.createElement('div');
-  container.innerHTML = MESSAGE_TEMPLATE_VOL;
+  if (isVolunteer) {
+    container.innerHTML = MESSAGE_TEMPLATE_VOL;
+  }
+  else{
+    container.innerHTML = MESSAGE_TEMPLATE;
+  }
   const div = container.firstChild;
   div.setAttribute('id', id);
 
