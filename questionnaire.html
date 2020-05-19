@@ -111,42 +111,24 @@ p{
       <option value="amharic">አማርኛ</option>
     </select>
   <br>
-  <label dir="rtl">לצרכי סטטיסטיקות בלבד:</label><br>
-  <input type="text" id="age" name="age" value="">
-  <label for="age" dir="rtl">גיל:</label><br>
-  <input type="text" id="city" name="city" value="">
-  <label for="city" dir="rtl">עיר מגורים:</label><br>
-  <input type="text" id="children" name="children" value="">
-  <label for="children" dir="rtl">מספר ילדים:</label><br>
-
-  
-    <select id="religion" >
-      <option value="" selected disabled hidden>בחרי</option>
-      <option value="religious">דתייה</option>
-      <option value="orthodox">מסורתית</option>
-      <option value="secular">חילונית</option>
-    </select>
-  <label for="religion" dir="rtl">רמת דתיות:</label>
-  
-  
     
-  <ol dir="rtl">שאלות מקדימות\רקע כללי:
+  <ol dir="rtl">קצת עליי:
     <br>
     <input type="radio" id="ans1" name="background" value="30">
-    <label for="ans1">אני מרגישה שאני נמצאת במערכת יחסים זוגית מכבדת ובטוחה</label><br>
+    <label for="ans1">אני לא מרגישה שאני נמצאת במערכת יחסים זוגית מכבדת ובטוחה</label><br>
     <input type="radio" id="ans2" name="background" value="60">
     <label for="ans2">אני חווה קשיים במערכת היחסים שלי</label><br>
     <input type="radio" id="ans3" name="background" value="100">
     <label for="ans3">אני חשה, משום מה, שזה לא מתאים לשתף אחרים\ות לגבי הזוגיות שלי</label><br><br>
-    <input type="submit" value="Submit">
 </ol>
 
 
   <h2 dir="rtl">הכוונה למצ'ינג לקבלת מענה מקצועי:</h2>
+  <p>*מספר הכניסות לא מוגבל אך בכל כניסה ניתן לבחור נושר אחד</p>
       <br>
   <h5 dir="rtl">הנושא שהכי מטריד אותי בחיי היומיום שלי:</h5>
         <!-- Question 1 -->
-        <button class="accordion">אני מרגישה שאני רוצה לדבר עם גורם מקצועי שיקשיב לי (יעוץ נפשי - פסיכולוגית קלינית \ עו"סית רווחה)</button>
+        <button class="accordion">אני מרגישה שאני רוצה לדבר עם גורם מקצועי שיקשיב לי</button>
         <!-- Sub questions for the first question -->
       <div class="panel">
         <div class="box">
@@ -200,7 +182,7 @@ p{
  
 
         <!-- Question 2 -->
-        <button class="accordion">אני מרגישה שהחשש שלי הוא בעיקר כלכלי (יעוץ פיננסי - רו"ח \ כלכלנית \ יועצת בבנק)</button>
+        <button class="accordion">אני מרגישה שהחשש שלי הוא בעיקר כלכלי</button>
         <!-- Sub questions for the second question -->
         <div class="panel">
           <div class="box">
@@ -254,7 +236,7 @@ p{
       </div>
    
         <!-- Question 3 -->
-        <button class="accordion">אני מוטרדת בכל הקשור לזכויות והאפשרויות החוקיות שלי כבת זוג ו\או כאמא? (יעוץ משפטי - עורכת דין)</button>
+        <button class="accordion">אני מוטרדת בכל הקשור לזכויות והאפשרויות החוקיות שלי כבת זוג ו\או כאמא?</button>
         <!-- Sub questions for the third question -->
         <div class="panel">
           <div class="box">
@@ -292,7 +274,7 @@ p{
 
         
       <!-- Question 4 -->
-      <button class="accordion">אני מפחדת שיקרה לי ו\או לילדים שלי משהו (יעוץ נפשי - פסיכולוגית קלינית \ עו"סית רווחה)</button>
+      <button class="accordion">אני מפחדת שיקרה לי ו\או לילדים שלי משהו</button>
          <!-- Sub questions for the fourth question -->
          <div class="panel">
           <div class="box">
@@ -342,17 +324,17 @@ p{
               <input type="radio" name="rating11" id="11_rate1"><label for="11_rate1">1</label>
             </div>
       </div>
-         
-      <button type="submit" class="btn btn-lg btn-question mt-3  btn-block " id="questionBtn">מעבר לשלב הבא</button>
-      <button class="submit_button" type="reset" id="reset" onclick="resetAnswer()">אתחול השאלון</button>
     </form>
     <br>
 
   <br>
-  <a href="tel:118" class="panic_button">חיוג מהיר לשירותי הרווחה</a>
-  <a href="tel:100" class="panic_button">חיוג מהיר למשטרה</a>
 
 </div>
+<button type="submit" class="btn btn-lg btn-question mt-3  btn-block " id="questionBtn">הגשת השאלון ומעבר לשלב הבאה</button>
+<button class="btn btn-lg btn-question mt-3  btn-block" class="submit_button" type="reset" id="reset" onclick="resetAnswer()">אתחול השאלון</button>
+
+<a href="tel:118" class="panic_button">חיוג מהיר לשירותי הרווחה</a>
+<a href="tel:100" class="panic_button">חיוג מהיר למשטרה</a>
 
  <!-- Style -->  
  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
