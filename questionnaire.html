@@ -7,7 +7,7 @@
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <title>ToolBox</title>
 <style>
-  @import "bourbon";
+
 
   .phoneicon{
       width: 40px; 
@@ -22,6 +22,7 @@
   body{
     background-color: bisque;
   }
+
   .accordion {
   background-color: #eee;
   color: #444;
@@ -47,11 +48,11 @@
   display: block;
   text-align: center;
   font-size: 0;
-  /*padding: 0 18px;
+  padding: 0 18px;
   display: none;
   background-color: white;
   overflow: hidden;
-  text-align: right;*/
+  text-align: right;
 }
 
 .bow{
@@ -112,7 +113,32 @@ p{
   <div id="wrapper">
   <h1 class="headline">Tool Box - שאלון כניסה</h1>
 
+  <label for="language" dir="rtl">בחרי את השפה בה תרצי שיתנהל הייעוץ:</label>
+    <select id="language">
+      <option value="hebrew">עברית</option>
+      <option value="english">English</option>
+      <option value="russian">русский</option>
+      <option value="arabic">عربى</option>
+      <option value="amharic">አማርኛ</option>
+    </select>
+  <br>
+  <label dir="rtl">לצרכי סטטיסטיקות בלבד:</label><br>
+  <label for="age" dir="rtl">גיל:</label>
+  <input type="text" id="age" name="age" value=""><br>
+  <label for="city" dir="rtl">עיר מגורים:</label>
+  <input type="text" id="city" name="city" value=""><br>
+  <label for="children" dir="rtl">מספר ילדים:</label>
+  <input type="text" id="children" name="children" value=""><br>
 
+  <label for="language" dir="rtl">רמת דתיות:</label>
+    <select id="language">
+      <option value="religious">דתייה</option>
+      <option value="orthodox">מסורתית</option>
+      <option value="secular">חילונית</option>
+    </select>
+  
+  
+    
   <ol dir="rtl">שאלות מקדימות\רקע כללי:
     <br>
     <input type="radio" id="age1" name="age" value="30">
@@ -319,12 +345,9 @@ p{
     </form>
     <br>
 
-<!--  <a class="lgscreenphone phonelink" href="https://www.youtube.com/channel/UCQQ9KdZl80R78hZjb8Q_3NQ"><img class="phoneicon" src="https://freeiconshop.com/wp-content/uploads/edd/phone-flat.png"></a>-->
-<!--  <a class="mbscreenphone phonelink" href="tel:9402188899"><img class="phoneicon" src="https://freeiconshop.com/wp-content/uploads/edd/phone-flat.png"></a>-->
-    
-  <button class="panic_button">שירותי רווחה</button>
-  <button class="panic_button">משטרה</button>
-
+  <br>
+  <a href="tel:118" class="panic_button">חיוג מהיר לשירותי הרווחה</a>
+  <a href="tel:100" class="panic_button">חיוג מהיר למשטרה</a>
 
 </div>
 
