@@ -409,3 +409,7 @@ initFirebaseAuth();
 
 // We load currently existing chat messages and listen to new ones.
 loadMessages();
+
+function back_onboarding() {
+  window.location.href = "onboarding.html";
+}

@@ -18,19 +18,29 @@
   <link rel="stylesheet" href="styles/chat.css">
 
 </head>
+<style>
+  .image{
+    float: left;
+    margin-left: 40%;
+  }
+  .name{
+    margin-right: 40%;
+    color: black;
+  }
+</style>
 
 <body>
   <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <div id="HeaderTab" class="tabcontent">
-      <p>נפתח צ'אט בטוח עם</p>
-      <img src="images/ai-faces-01.jpg" width="75" height="75">
-        <h3>דנה כהן</h3>
+      <p style="margin-left: 20%; font-size: 20px" >:נפתח צ'אט בטוח עם</p>
+      <img src="images/ai-faces-01.jpg" width="75" height="75" class="image" >
+        <h3 class="name">דנה כהן</h3>
     </div>
 
 
     <main class="mdl-layout__content mdl-color--grey-100">
       <div>
-        <button id="signout" class="btn-login btn-lgn"> יציאה </button>
+        <button id="signout" class="btn-login btn-lgn" onclick="back_onboarding()"> יציאה </button>
       </div>
 
       <div id="messages-card-container" class="mdl-cell mdl-cell--12-col mdl-grid">
@@ -86,6 +96,9 @@
 
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+
+
+  
 
 </script>
 
