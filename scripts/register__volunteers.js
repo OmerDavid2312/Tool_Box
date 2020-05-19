@@ -10,6 +10,7 @@ button.addEventListener('click',(e)=>{
     e.preventDefault();
     const emailVal = email.value;
     const passwordVal = password.value;
+    const nameVal = name.value;
     const isVolunteer = true;
     if(!emailVal || !passwordVal || emailVal.trim()=='' || passwordVal.trim()=='')
     {
@@ -27,7 +28,7 @@ button.addEventListener('click',(e)=>{
         db.collection("users").add({
             email:emailVal,
             volunteer :isVolunteer,
-            name:name
+            name:nameVal
 
         })
         .then(()=> {
