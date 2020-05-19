@@ -2,7 +2,6 @@
 <html>
   <head>
 
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <title>ToolBox</title>
@@ -16,7 +15,6 @@
   *{text-align: right}
 
   .headline{
-    font-family: Heebo;
     text-align: right;
   }
 
@@ -108,12 +106,13 @@ p{
   font-size: 15px;
 }
 
-  </style>
-    </head>
+
+</style>
+</head>
 
 <body>
   <div id="wrapper">
-  <h1 class="headline">Tool Box - שאלון כניסה</h1>
+  <h1 class="headline">Wemanage - שאלון כניסה</h1>
 
   <label for="language" dir="rtl">בחרי את השפה בה תרצי שיתנהל הייעוץ:</label>
     <select id="language">
@@ -125,20 +124,21 @@ p{
     </select>
   <br>
   <label dir="rtl">לצרכי סטטיסטיקות בלבד:</label><br>
-  <label for="age" dir="rtl">גיל:</label>
-  <input type="text" id="age" name="age" value=""><br>
-  <label for="city" dir="rtl">עיר מגורים:</label>
-  <input type="text" id="city" name="city" value=""><br>
-  <label for="children" dir="rtl">מספר ילדים:</label>
-  <input type="text" id="children" name="children" value=""><br>
+  <input type="text" id="age" name="age" value="">
+  <label for="age" dir="rtl">גיל:</label><br>
+  <input type="text" id="city" name="city" value="">
+  <label for="city" dir="rtl">עיר מגורים:</label><br>
+  <input type="text" id="children" name="children" value="">
+  <label for="children" dir="rtl">מספר ילדים:</label><br>
 
-  <label for="religion" dir="rtl">רמת דתיות:</label>
+  
     <select id="religion" >
       <option value="" selected disabled hidden>בחרי</option>
       <option value="religious">דתייה</option>
       <option value="orthodox">מסורתית</option>
       <option value="secular">חילונית</option>
     </select>
+  <label for="religion" dir="rtl">רמת דתיות:</label>
   
   
     
