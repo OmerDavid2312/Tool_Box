@@ -14,6 +14,9 @@
  * limitations under the License.
  */
 'use strict';
+const db = firebase.firestore();
+var name;
+var isVolunteer;
 
 // Signs-in Friendly Chat.
 function signIn() {
@@ -40,8 +43,17 @@ function getProfilePicUrl() {
 }
 
 // Returns the signed-in user's display name.
-function getUserName() {
-  return firebase.auth().currentUser.displayName;
+function getUserDataByEmail(email) {
+  db.collection("users").where('email','==',email).get().then(res=>{
+    res.forEach(doc=>{
+      name = doc.data().name;
+      isVolunteer = doc.data().volunteer;
+    });
+  });
+}
+
+function getUserName(){
+  return name;
 }
 
 // Returns true if a user is signed-in.
@@ -179,6 +191,7 @@ function onMessageFormSubmit(e) {
 function authStateObserver(user) {
   if (user) { // User is signed in!
     // Get the signed-in user's profile pic and name.
+    getUserDataByEmail(user.email);
     var profilePicUrl = getProfilePicUrl();
     var userName = getUserName();
 
@@ -237,6 +250,14 @@ var MESSAGE_TEMPLATE =
       '<div class="name"></div>' +
     '</div>';
 
+// Template for messages.
+var MESSAGE_TEMPLATE_VOL =
+'<div class="message-container vol">' +
+  '<div class="spacing"><div class="pic"></div></div>' +
+  '<div class="message"></div>' +
+  '<div class="name"></div>' +
+'</div>';
+
 // Adds a size to Google Profile pics URLs.
 function addSizeToGoogleProfilePic(url) {
   if (url.indexOf('googleusercontent.com') !== -1 && url.indexOf('?') === -1) {
@@ -259,7 +280,7 @@ function deleteMessage(id) {
 
 function createAndInsertMessage(id, timestamp) {
   const container = document.createElement('div');
-  container.innerHTML = MESSAGE_TEMPLATE;
+  container.innerHTML = MESSAGE_TEMPLATE_VOL;
   const div = container.firstChild;
   div.setAttribute('id', id);
 
@@ -366,19 +387,19 @@ var signInSnackbarElement = document.getElementById('must-signin-snackbar');
 
 // Saves message on form submit.
 messageFormElement.addEventListener('submit', onMessageFormSubmit);
-signOutButtonElement.addEventListener('click', signOut);
-signInButtonElement.addEventListener('click', signIn);
+// signOutButtonElement.addEventListener('click', signOut);
+// signInButtonElement.addEventListener('click', signIn);
 
 // Toggle for the button.
 messageInputElement.addEventListener('keyup', toggleButton);
 messageInputElement.addEventListener('change', toggleButton);
 
 // Events for image upload.
-imageButtonElement.addEventListener('click', function(e) {
-  e.preventDefault();
-  mediaCaptureElement.click();
-});
-mediaCaptureElement.addEventListener('change', onMediaFileSelected);
+// imageButtonElement.addEventListener('click', function(e) {
+//   e.preventDefault();
+//   mediaCaptureElement.click();
+// });
+// mediaCaptureElement.addEventListener('change', onMediaFileSelected);
 
 // initialize Firebase
 initFirebaseAuth();
@@ -388,3 +409,7 @@ initFirebaseAuth();
 
 // We load currently existing chat messages and listen to new ones.
 loadMessages();
+
+function back_onboarding() {
+  window.location.href = "onboarding.html";
+}

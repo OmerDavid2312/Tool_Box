@@ -16,27 +16,55 @@
     font-weight: bold;
     border-color: #d661e0;
     }
+     .column {
+         width: 30%;
+         padding: 10px;
+
+     }
+
+     /* Clear floats after image containers */
+     .row::after {
+         content: "";
+         clear: both;
+         display: table;
+     }
+
     .btn-tochat:hover{
     background-color: #d661e0;
     color: white;
     font-weight: bold;
     border-color: #d661e0;
     }
+     img {
+         border: 1px solid #ddd;
+         border-radius: 4px;
+         padding: 3px;
+         width: 150px;
+     }
     </style>
   </head>
-<body dir="rtl">
+<body dir="rtl" >
     <header class="masthead" id='home'>
         <div class="container h-100">
-          <div class="row h-80 align-items-center justify-content-center text-center">
-            <div class="col-lg-10 align-self-end">
-              <h1 class=" text-pink font-weight-bold display-4"  dir="rtl">נמצאה התאמה !</h1>
+          <div class="row h-80 align-items-center justify-content-center text-center" >
+            <div class="col-lg-10 align-self-end" >
+              <h1 class=" text-pink font-weight-bold display-4"  dir="rtl" >נמצאה התאמה </h1>
               <hr class="new5"width="8%">
             </div>
             <div class="col-lg-8 align-self-baseline">
-              <p class="text-dark font-weight-bold mb-3 lead">נמצאה התאמה עם - X </p>
-              <a href="chat.html" role="button" class='btn btn-lg btn-tochat '>מעבר לצ'אט בטוח</a>
+              <p class="text-dark font-weight-bold mb-3 lead">דנה כהן </p>
+                <div class="row">
+                    <div class="column" style="margin-right: 135px">
+                        <h6>קצת על עצמי:</h6>
+                        <p>שמי דנה, אני בת 35 וגרה בחיפה. אני עובדת כעובדת סוציאלית כבר 7 שנים ואשמח לעזור לך במה שאוכל.</p>
+                    </div>
+                    <img src="images/ai-faces-01.jpg" width="193" height="200" class="column" alt="img"><br><br>
+                </div>
+                <br><br><br>
+                <a href="chat.html" role="button" class='btn btn-lg btn-tochat '>מעבר לצ'אט בטוח</a>
+                <button class='btn btn-lg btn-tochat'>בחירה חוזרת</button>
           </div>
-            
+
         </div>
           
       </header>

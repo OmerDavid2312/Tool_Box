@@ -77,11 +77,25 @@
               <p class="text-white font-weight-bold mb-3 lead text">הדרך המהירה, האנונימית והאמינה ביותר לקבלת ייעוץ והכוונה אישיים <br>
                 במגוון תחומים: כלכלי, נפשי, פיזי
                 </p>
+<<<<<<< HEAD
                 <br><br>
                 <hr class="new5"width="10%"><br>
              
              <a href="login__volunteers.html" class="volunteerbutton" dir='rtl'>מתנדבות</a>
             </div>
+=======
+             <button id="createuser" class="btn btn-register btn-lg flex-fill pr5 font-weight-bold mr-4"  dir="rtl" style="font-size:1.25rem !important;" dir='rtl'>התחילי </button>
+             <a href="login__volunteers.html" class="btn btn-login btn-lg flex-fill pr5 font-weight-bold"  dir='rtl' style="font-size:1.25rem !important;">למתנדבת </a>
+
+
+              
+           
+            
+          </div>
+            
+        </div>
+          
+>>>>>>> 87224ca30eb161e3a5325ea84118de959b8c4fd4
       </header>
         
 
@@ -96,6 +110,8 @@
 <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
@@ -112,6 +128,51 @@
   
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+</script>
+<script>
+  document.getElementById('createuser').addEventListener('click',()=>{
+    var chars = 'abcdefghijklmnopqrstuvwxyz'
+
+const generateEmail = () =>{
+return chars[Math.floor(Math.random()*26)] 
++ Math.random().toString(36).substring(2,11) 
++ '@random.com';
+};
+
+
+var email = generateEmail();
+var isVolunteer = false;
+var password = email.split('@')[0];
+
+//create new user in firebase
+firebase.auth().createUserWithEmailAndPassword(email, password).then(res=>{
+  //add to collection
+  var db = firebase.firestore();
+  db.collection("users").add({
+      email:email,
+      name:'אנונימית',
+      volunteer :isVolunteer,
+
+  })
+  .then(()=> {
+
+      //login after register
+      firebase.auth().signInWithEmailAndPassword(email, password).then(res=>{
+          location.href = 'questionnaire.html'
+      }).catch(err=>{
+
+      })
+  })
+  .catch((err) =>{
+
+  });
+
+
+}).catch(function(error) {
+  
+});
+  })
+
 </script>
 </body>
 </html>

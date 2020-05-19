@@ -93,8 +93,8 @@ main, #messages-card {
   padding: 5px 0 5px 10px;
 
 }
-.vol-message {
-  color: rgb(125, 210, 255);
+.message-container .vol {
+  background-color: ;
 }
 
 .message-container .name {
@@ -147,7 +147,7 @@ main, #messages-card {
   top: -3px;
   position: relative;
   display: inline-block;
-  background-image: url('/images/profile_placeholder.png');
+  background-image: url('https://static-exp1.licdn.com/sc/p/com.linkedin.jobs-guest-frontend%3Ajobs-guest-frontend-static-content%2B0.0.2538/f/%2Fjobs-guest-frontend%2Fimages%2Fcommon%2Fpeople%2Fuser27.jpg');
   background-repeat: no-repeat;
   width: 40px;
   height: 40px;
@@ -182,7 +182,7 @@ main, #messages-card {
   }
   #user-container {
     top: 72px;
-    background-color: rgb(3,155,229);
+    background-color: #d661e0;
     height: 38px;
     padding-top: 3px;
     padding-right: 2px;
@@ -195,12 +195,50 @@ main, #messages-card {
   }
 }
 .mdl-textfield__label:after {
-  background-color: #0288D1;
+  background-color: #d661e0;
 }
 .mdl-textfield--floating-label.is-focused .mdl-textfield__label {
-  color: #0288D1;
+  color: #d661e0;
 }
 .mdl-button .material-icons {
   top: -1px;
   margin-right: 5px;
 }
+
+.header-background{
+  background-color: #d661e0;
+}
+
+
+/* Style the tab buttons */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 10%;
+}
+
+/* Change background color of buttons on hover */
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Set default styles for tab content */
+.tabcontent {
+  color: #d661e0;
+  padding: 10px;
+  text-align: center;
+  align-content: center;
+}
+
+.btn-login{
+  background-color: transparent;
+  color: #d661e0;
+  font-weight: bold;
+  border-color: #d661e0;
+  }
