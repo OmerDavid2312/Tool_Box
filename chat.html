@@ -30,6 +30,10 @@
     margin-right: 40%;
     color: black;
   }
+  /*li span {*/
+  /*  position: relative;*/
+  /*  left: 60px;*/
+  /*}*/
 </style>
 
 <body>
@@ -46,7 +50,10 @@
         <button id="signout" class="btn-outline-danger font-weight-bold btn btn-lg" onclick="back_onboarding()"> יציאה </button>
       
         <button id="relogin" class="btn-login btn btn-lg font-weight-bold" onclick="getDetails()"> פרטים להתחברות חוזרת </button>
+<!--        <h6>אנא בדקי כי רק אנשים שאת בוטחת בהם נמצאים בסביבתך בעת גלישה באתר</h6>-->
+<!--        <h6 style="text-align: right" ">מומלץ למחוק את האתר מהיסטורית הדפדפן</h6>-->
       </div>
+
 
       <div id="messages-card-container" class="mdl-cell mdl-cell--12-col mdl-grid">
 
@@ -55,6 +62,7 @@
           class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet mdl-cell--6-col-desktop">
           <div class="mdl-card__supporting-text mdl-color-text--grey-600">
             <div id="messages">
+
             </div>
             <form id="message-form" action="#">
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -68,6 +76,15 @@
             </form>
           </div>
         </div>
+        <ul dir="rtl" style="float: right; position: absolute; margin-left: 50%">
+          <br>
+          <!--          <li><span>מומלץ למחוק את האתר מהיסטורית הדפדפן</span></li>-->
+          <!--          <li><span>תקבלי מענה מהיועצת תוך לכל היותר 24 שעות</span></li>-->
+          <li>תוכלי להתחבר ישירות לצ'אט על ידי שימוש בפרטים דיסקרטיים שהוגרלו בשבילך</li>
+          <li style="text-align: right">מומלץ למחוק את האתר מהיסטורית הדפדפן</li>
+          <li style="text-align: right">תקבלי מענה מהיועצת תוך לכל היותר 24 שעות</li>
+          <li style="text-align: right">זכרי כי אינך מחוייבת למסור שום פרטים</li>
+        </ul>
 
         <div id="must-signin-snackbar" class="mdl-js-snackbar mdl-snackbar">
           <div class="mdl-snackbar__text"></div>
