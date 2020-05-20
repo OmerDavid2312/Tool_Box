@@ -27,12 +27,6 @@ function getDetails(){
   alert('מייל לחיבור חוזר הוא : ' + email + ' סיסמא : ' + password);
 }
 
-// Signs-in Friendly Chat.
-function signIn() {
-  // Sign in Firebase using popup auth and Google as the identity provider.
-  var provider = new firebase.auth.GoogleAuthProvider();
-  firebase.auth().signInWithPopup(provider);
-}
 
 // Signs-out of Friendly Chat.
 function signOut() {
