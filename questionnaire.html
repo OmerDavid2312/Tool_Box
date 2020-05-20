@@ -45,7 +45,6 @@
   background-color: white;
   overflow: hidden;
   text-align: right;
-  float: right;
 }
 .box{
   width: 500px;
@@ -105,6 +104,7 @@ font-size: larger;
     }
     #q{
       font-size: 15px;
+      
     }
     header.masthead{
               text-align: center;
@@ -126,7 +126,7 @@ font-size: larger;
   <div id="wrapper">     
       <div class="container">
         <img src="images/logo.jpeg" width="150" height="150" class="float-right rounded">
-        <h1 class="headline mt-5" style="margin-left: 15% !important;" >שאלון התאמה</h1>
+        <h1 class="headline mt-5" style="margin-left: 15% !important;" >שאלון כניסה</h1>
     <div class="col-sm-9 col-md-7 col-lg-7 mt-5 mx-auto" >
   <hr class="my-4" width="20%">
   <label for="language" dir="rtl" class="font-weight-bold text-pink" style="font-size: 18px !important;">בחרי את השפה בה תרצי שיתנהל הייעוץ</label>
@@ -140,22 +140,19 @@ font-size: larger;
     </select> 
    
   <br><br>
-    <label for="checkbox" class="font-weight-bold text-pink" style="font-size: 18px !important;">קצת עליי</label>
+    <label for="radio" class="font-weight-bold text-pink" style="font-size: 18px !important;">קצת עליי</label>
     <br>
     <div class="custom-control">  
   <ol dir="rtl" style="float: right !important; text-align: right !important;">
-    <input type="checkbox" id="ans1" name="background" class="form-check-input" value="30">
-    <label for="ans1" class="form-check-label mr-3">אני מרגישה שאני נמצאת במערכת יחסים לא מכבדת ו\או בטוחה</label><br>
-    <input type="checkbox"  id="ans2" name="background" class="form-check-input" value="60">
+    <input type="radio" id="ans1" name="background" class="form-check-input" value="30">
+    <label for="ans1" class="form-check-label mr-3">אני לא מרגישה שאני נמצאת במערכת יחסים זוגית מכבדת ובטוחה</label><br>
+    <input type="radio"  id="ans2" name="background" class="form-check-input" value="60">
     <label for="ans2" class="form-check-label mr-3">אני חווה קשיים במערכת היחסים שלי</label><br>
-    <input type="checkbox" id="ans3" name="background" class="form-check-input" value="100">
-    <label for="ans3" class="form-check-label mr-3">אני חשה, משום מה, שזה לא מתאים לשתף משפחה או חברות לגבי הזוגיות שלי</label><br><br>
+    <input type="radio" id="ans3" name="background" class="form-check-input" value="100">
+    <label for="ans3" class="form-check-label mr-3">אני חשה, משום מה, שזה לא מתאים לשתף אחרים\ות לגבי הזוגיות שלי</label><br><br>
 </ol>
-<h6>אם סימנת וי על החוויות האלה סימן שאת במקום הנכון</h6>
 </div>
-<h6>בואי נצא לדרך - אנחנו כאן איתך כדי למצוא את *אשת המקצוע המתאימה לצרכים שלך</h6>
-<p>*נשות המקצוע הינן מתנדבות שעברו סינון ראשוני על סמך התאמה חוקית (הן בעלות תעודות ורשיונות) לייעץ</p>
-  <br><br><br>
+  <br><br><br><br><br>
 
   <h5 dir="rtl" class="font-weight-bold text-pink" style="font-size: 23px !important;">הכוונה להתאמה לקבלת מענה מקצועי</h5>
   <p>*מספר הכניסות לא מוגבל אך בכל כניסה ניתן לבחור נושא אחד</p>
@@ -166,8 +163,8 @@ font-size: larger;
         <!-- Sub questions for the first question -->
       <div class="panel">
         <div class="box">
-          <p id="q">אני צריכה לפרוק את שעל ליבי. בלי שיפוטיות ובלי ביקורתיות</p>
-          <div class="rating" style="margin-right: 15% !important;">
+          <p id="q">אני רוצה \ צריכה לפרוק</p>
+          <div class="rating" style="margin-left: 20% !important;">
             <input type="radio" name="rating1" id="1_rate10"><label for="1_rate10">10</label>
             <input type="radio" name="rating1" id="1_rate9"><label for="1_rate9">9</label>
             <input type="radio" name="rating1" id="1_rate8"><label for="1_rate8">8</label>
@@ -183,7 +180,7 @@ font-size: larger;
         <br><br><br>
         <div class="box">
           <p id="q" style="margin-right: 15% !important;">אני צריכה לשתף גורם שהוא חיצוני ולא מכיר אותי ואת המשפחה שלי</p>
-          <div class="rating" style="margin-right: 15% !important;">
+          <div class="rating" style="margin-left: 20% !important;">
             <input type="radio" name="rating2" id="2_rate10"><label for="2_rate10">10</label>
             <input type="radio" name="rating2" id="2_rate9"><label for="2_rate9">9</label>
             <input type="radio" name="rating2" id="2_rate8"><label for="2_rate8">8</label>
@@ -198,8 +195,8 @@ font-size: larger;
         </div>
         <br><br><br>
       <div class="box"> 
-        <p id="q">אני רוצה לקבת כלים לעבודה עצמית - שיחזור לי הביטחון העצמי</p>
-        <div class="rating" style="margin-right: 15% !important;">
+        <p id="q">אני רוצה לקבל כלים לעבודה \ חשיבה עצמאית</p>
+        <div class="rating" style="margin-left: 20% !important;">
           <input type="radio" name="rating3" id="3_rate10"><label for="3_rate10">10</label>
           <input type="radio" name="rating3" id="3_rate9"><label for="3_rate9">9</label>
           <input type="radio" name="rating3" id="3_rate8"><label for="3_rate8">8</label>
@@ -221,8 +218,8 @@ font-size: larger;
         <!-- Sub questions for the second question -->
         <div class="panel">
           <div class="box">
-            <p id="q" >אין לי שליטה, חלקית או מלאה, על חשבון הבנק שלי</p>
-            <div class="rating" style="margin-right: 15% !important;">
+            <p id="q" >אין לי שליטה \ שליטה מלאה על חשבון הבנק שלי</p>
+            <div class="rating" style="margin-left: 20% !important;">
               <input type="radio" name="rating4" id="4_rate10"><label for="4_rate10">10</label>
               <input type="radio" name="rating4" id="4_rate9"><label for="4_rate9">9</label>
               <input type="radio" name="rating4" id="4_rate8"><label for="4_rate8">8</label>
@@ -238,7 +235,7 @@ font-size: larger;
           
           <div class="box">
             <p id="q">אין לי הכנסה עצמית ואני מרגישה תלויה</p>
-            <div class="rating" style="margin-right: 15% !important;">
+            <div class="rating" style="margin-left: 20% !important;">
               <input type="radio" name="rating5" id="5_rate10"><label for="5_rate10">10</label>
               <input type="radio" name="rating5" id="5_rate9"><label for="5_rate9">9</label>
               <input type="radio" name="rating5" id="5_rate8"><label for="5_rate8">8</label>
@@ -254,8 +251,8 @@ font-size: larger;
         
         
           <div class="box">
-            <p id="q" style="margin-right: 15% !important;">אני מפחדת שהוא יחסום לי את חשבון הבנק ולרוב מושעת כסף בלי שהוא ישים לב</p>
-            <div class="rating" style="margin-right: 15% !important;">
+            <p id="q" style="margin-right: 15% !important;">אני מפחדת שיחסמו לי את חשבון הבנק ורוצה למשוך כסף "מתחת לראדר"</p>
+            <div class="rating" style="margin-left: 20% !important;">
               <input type="radio" name="rating6" id="6_rate10"><label for="6_rate10">10</label>
               <input type="radio" name="rating6" id="6_rate9"><label for="6_rate9">9</label>
               <input type="radio" name="rating6" id="6_rate8"><label for="6_rate8">8</label>
@@ -271,12 +268,12 @@ font-size: larger;
       </div>
    
         <!-- Question 3 -->
-        <button class="accordion">אני מוטרדת בכל הקשור לזכויות והאפשרויות החוקיות שלי כבת זוג ו\או כאמא</button>
+        <button class="accordion">אני מוטרדת בכל הקשור לזכויות והאפשרויות החוקיות שלי כבת זוג ו\או כאמא?</button>
         <!-- Sub questions for the third question -->
         <div class="panel">
           <div class="box">
-            <p id="q">אני לא יודעת מה הזכויות החוקיות שלי ואיך לממש אותן</p>
-            <div class="rating" style="margin-right: 15% !important;">
+            <p id="q"> אני לא יודעת מה הזכויות החוקיות שלי ואיך לממש אותן</p>
+            <div class="rating" style="margin-left: 20% !important;">
               <input type="radio" name="rating7" id="7_rate10"><label for="7_rate10">10</label>
               <input type="radio" name="rating7" id="7_rate9"><label for="7_rate9">9</label>
               <input type="radio" name="rating7" id="7_rate8"><label for="7_rate8">8</label>
@@ -292,7 +289,7 @@ font-size: larger;
           
           <div class="box">
             <p id="q" style="margin-right: 15% !important;">אני מוטרדת מאוד לגבי הילדים שלי ומה יקרה להם במידה ואנסה להתרחק מבן הזוג שלי</p>
-            <div class="rating" style="margin-right: 15% !important;">
+            <div class="rating" style="margin-left: 20% !important;">
               <input type="radio" name="rating8" id="8_rate10"><label for="8_rate10">10</label>
               <input type="radio" name="rating8" id="8_rate9"><label for="8_rate9">9</label>
               <input type="radio" name="rating8" id="8_rate8"><label for="8_rate8">8</label>
@@ -305,10 +302,16 @@ font-size: larger;
               <input type="radio" name="rating8" id="8_rate1"><label for="8_rate1">1</label>
             </div>
           </div>
+      </div>
 
+        
+      <!-- Question 4 -->
+      <button class="accordion">אני מפחדת שיקרה לי ו\או לילדים שלי משהו</button>
+         <!-- Sub questions for the fourth question -->
+         <div class="panel">
           <div class="box">
-            <p id="q" style="margin-right: 15% !important;">אני רוצה להתגרש ומפחדת לעשות את הצעד</p>
-            <div class="rating" style="margin-right: 15% !important;">
+            <p id="q">אני מרגישה שאני בסכנה</p>
+            <div class="rating" style="margin-left: 20% !important;">
               <input type="radio" name="rating9" id="9_rate10"><label for="9_rate10">10</label>
               <input type="radio" name="rating9" id="9_rate9"><label for="9_rate9">9</label>
               <input type="radio" name="rating9" id="9_rate8"><label for="9_rate8">8</label>
@@ -321,16 +324,10 @@ font-size: larger;
               <input type="radio" name="rating9" id="9_rate1"><label for="9_rate1">1</label>
             </div>
           </div>
-      </div>
-
-        
-      <!-- Question 4 -->
-      <button class="accordion">אני מפחדת שיקרה לי ו\או לילדים שלי משהו</button>
-         <!-- Sub questions for the fourth question -->
-         <div class="panel">
+          
           <div class="box">
-            <p id="q">אני מרגישה שאני בסכנה</p>
-            <div class="rating" style="margin-right: 15% !important;">
+            <p id="q">אני מרגישה שהילדים שלי בסכנה</p>
+            <div class="rating" style="margin-left: 20% !important;">
               <input type="radio" name="rating10" id="10_rate10"><label for="10_rate10">10</label>
               <input type="radio" name="rating10" id="10_rate9"><label for="10_rate9">9</label>
               <input type="radio" name="rating10" id="10_rate8"><label for="10_rate8">8</label>
@@ -343,10 +340,10 @@ font-size: larger;
               <input type="radio" name="rating10" id="10_rate1"><label for="10_rate1">1</label>
             </div>
           </div>
-          
+
           <div class="box">
-            <p id="q">אני מרגישה שהילדים שלי בסכנה</p>
-            <div class="rating" style="margin-right: 15% !important;">
+            <p id="q">אני צריכה עזרה לצאת מהבית</p>
+            <div class="rating" style="margin-left: 20% !important;">
               <input type="radio" name="rating11" id="11_rate10"><label for="11_rate10">10</label>
               <input type="radio" name="rating11" id="11_rate9"><label for="11_rate9">9</label>
               <input type="radio" name="rating11" id="11_rate8"><label for="11_rate8">8</label>
@@ -358,22 +355,6 @@ font-size: larger;
               <input type="radio" name="rating11" id="11_rate2"><label for="11_rate2">2</label>
               <input type="radio" name="rating11" id="11_rate1"><label for="11_rate1">1</label>
             </div>
-          </div>
-
-          <div class="box">
-            <p id="q">אני צריכה עזרה לצאת מהבית</p>
-            <div class="rating" style="margin-right: 15% !important;">
-              <input type="radio" name="rating12" id="12_rate10"><label for="12_rate10">10</label>
-              <input type="radio" name="rating12" id="12_rate9"><label for="12_rate9">9</label>
-              <input type="radio" name="rating12" id="12_rate8"><label for="12_rate8">8</label>
-              <input type="radio" name="rating12" id="12_rate7"><label for="12_rate7">7</label>
-              <input type="radio" name="rating12" id="12_rate6"><label for="12_rate6">6</label>
-              <input type="radio" name="rating12" id="12_rate5"><label for="12_rate5">5</label>
-              <input type="radio" name="rating12" id="12_rate4"><label for="12_rate4">4</label>
-              <input type="radio" name="rating12" id="12_rate3"><label for="12_rate3">3</label>
-              <input type="radio" name="rating12" id="12_rate2"><label for="12_rate2">2</label>
-              <input type="radio" name="rating12" id="12_rate1"><label for="12_rate1">1</label>
-            </div>
       </div>
     </form>
     <br>
@@ -384,14 +365,13 @@ font-size: larger;
 </div>
 </div>
 <div id="bu" style="margin-right: 2% !important;">
-<button type="submit" class="btn btn-lg btn-question mt-3" id="questionBtn" onClick="location.href = 'match.html'">הגשת השאלון ומעבר לצ'אט בטוח&nbsp;<i class="fas fa-check"></i></button>
+<button type="submit" class="btn btn-lg btn-question mt-3" id="questionBtn" onClick="location.href = 'match.html'">סיום השאלון ומעבר לשלב הבא&nbsp;<i class="fas fa-check"></i></button>
 <button class="btn btn-lg btn-question mt-3" class="submit_button" type="reset" id="reset" onclick="resetAnswer()" >אתחול השאלון&nbsp; <i class="fas fa-undo"></i></button>
 </div>
 <br><br>
 <div style="margin-right: 2% !important;">
 <a href="tel:118" class="btn btn-danger">חיוג מהיר לשירותי הרווחה&nbsp;<i class='fas fa-phone'></i></a>
 <a href="tel:100" class="btn btn-danger">חיוג מהיר למשטרה&nbsp;<i class='fas fa-phone'></i></a>
-
 </div>
  <!-- Style -->  
  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
